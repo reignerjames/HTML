@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Reigner's Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- SOLID NAV -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-left"><h1>REIGNER CASANGCAPAN</h1></div>
+      <div class="nav-right">
+        <a href="https://github.com/reignerjames" target="_blank" aria-label="GitHub">
+          <img src="github.png" alt="GitHub" class="icon icon-github">
+        </a>
+        <a href="https://au.linkedin.com/in/reigner04" target="_blank" aria-label="LinkedIn">
+          <img src="linkedin.png" alt="LinkedIn" class="icon">
+        </a>
+        <a href="#projects" class="nav-btn">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- INDUSTRIAL WINDOW -->
+  <section class="window">
+    <!-- Fake URL bar -->
+    <div class="window-topbar">
+      <span class="url">HTTPS://reigner.work/about</span>
+      <div class="controls" aria-hidden="true">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      </div>
+    </div>
+
+    <!-- Thin menu row -->
+    <nav class="window-menu">
+      <a href="#about">ABOUT </a>
+      <a href="#education">EDUCATION </a>
+      <a href="#brand">EXPERIENCE </a>
+      <a href="#projects">PROJECTS </a>
+    </nav>
+
+    <!-- Split panes -->
+    <div class="window-content grid-overlay scanlines">
+      <article class="pane left">
+        <h2 class="about-title"><span class="slash">/</span>about</h2>
+        <p class="mono">
+          This site showcases Reigner Casangcapan's portfolio, projects, and experiments
+          across HTML/CSS, Python, SQL, and more.
+        </p>
+        <p>
+          HTML/CSS, Python, SQL, RPIs, Git, SaaS, APIs, ORMs, UI/UX, Figma, Microsoft Office
+        </p>
+
+        <details class="mono small">
+          <summary>Meta</summary>
+          <ul>
+            <li>Created: 18 Sep 2025</li>
+            <li>Deployed: 30 Sep 2025</li>
+            <li>Stack: HTML • CSS</li>
+          </ul>
+        </details>
+      </article>
+
+      <aside class="pane right">
+        <img src="reigner.jpg" alt="Reigner" class="reigner-img">
+      </aside>
+    </div>
+  </section>
+
+  <!-- Clock -->
+  <div id="clock" aria-live="polite">--:--:--</div>
+
+  <footer><small>FOOTER</small></footer>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const time = now.toLocaleTimeString('en-AU', {
+        hour: '2-digit', minute: '2-digit', second: '2-digit',
+        hour12: false, timeZone: 'Australia/Brisbane'
+      });
+      document.getElementById('clock').textContent = time;
+    }
+    updateClock(); setInterval(updateClock, 1000);
+  </script>
+</body>
+</html>
